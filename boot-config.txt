@@ -1,5 +1,25 @@
+# monitor shutdown, listen to this pin for a change of state
+# active_low=0 means active HIGH
+#dtoverlay=gpio-shutdown,gpiopin=20,active_low=0,gpio_pull=down,debounce=150
+
+# drive a pin high or low upon shutdown, halt and reboot
+# default: drive pin HIGH
+# active-low: drive pin LOW
+# eg: dtoverlay=gpio-poweroff,gpiopin=26,active_low=1
+dtoverlay=gpio-poweroff,gpiopin=21
+
+# set pin as op: output (dh: high, dl: low), ip: input (pu: pullup, pd: pulldown, pn/np: no pull)
+gpio=21=op,dl
+
+[pi4]
+# Enable DRM VC4 V3D driver on top of the dispmanx display stack
+#dtoverlay=vc4-fkms-v3d
+#max_framebuffers=2
+
+[all]
+#dtoverlay=vc4-fkms-v3d
 start_x=0
-gpu_mem=64
+gpu_mem=16
 
 #dtoverlay=pi4-disable-bt
 enable_uart=0
