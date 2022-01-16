@@ -1,0 +1,5 @@
+I actually ended up slightly simplifying this design by not using any optocoupler. 
+
+You can have some insight about the development of this circuit by reading this conversation:
+https://www.reddit.com/r/diyelectronics/comments/qy7nia/power_control_latching_circuit/
+this guy on Reddit was very helpful. He suggested a different approach, but ultimately I liked the relay and kept it in my design.
