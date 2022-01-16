@@ -1,0 +1,20 @@
+start_x=0
+gpu_mem=64
+
+#dtoverlay=pi4-disable-bt
+enable_uart=0
+
+# if using USB bt and USB wifi
+dtoverlay=disable-wifi
+dtoverlay=disable-bt
+
+
+# second I2C bus for RTC clock
+# If you need 5 extra busses, the busses must bi in the order of 7,6, 5, 4, 3
+dtoverlay=i2c-gpio,bus=3,i2c_gpio_delay_us=1,i2c_gpio_sda=22,i2c_gpio_scl=27
+
+
+# activity led control
+#dtoverlay=act-led,gpio=26
+#dtoverlay=gpio-led,gpio=26,label=pwr_led,trigger=heartbeat
+#triggers: mmc0, heartbeat, backlight, timer, oneshot, none, cpu0, rfkill0 (wifi), rfkill1 (bt)
