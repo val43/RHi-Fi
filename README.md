@@ -6,3 +6,6 @@ Thanks to @nicokaiser for providing the [rpi-audio-receiver](https://github.com/
 
 
 Adjust the settings in i2c-lcd-drive.py according to your LCD hardware.
+
+
+Execute both powerbutton.py and i2c-ldc-drive.py as systemd services. 
